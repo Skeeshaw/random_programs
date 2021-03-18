@@ -1,2 +1,2 @@
 # random_programs
-calculator
+ Repo for my javascript bot & python bot tests
