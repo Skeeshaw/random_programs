@@ -4,9 +4,9 @@ const fs = require('fs')
 var fetch = require('node-fetch')
 
 
-//client.on('ready', () => {
-//	console.log("Connected as " + client.user.tag)
-//})
+client.on('ready', () => {
+	console.log("Connected as " + client.user.tag)
+})
 
 fs.readFile('password.env', (err, data) => {
 	if (err) throw err;
@@ -17,4 +17,5 @@ fs.readFile('password.env', (err, data) => {
 
 
 //due to this file being public, my token is being held in a .env file
-//client.login()
+//
+//client.login(test)
