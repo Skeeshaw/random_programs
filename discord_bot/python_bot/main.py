@@ -19,4 +19,20 @@ async def on_ready(): # when bot starts
     print(client.user.id)
     print('-------')
 
+async def on_message(message):
+    #stop bot from replying to itself
+    if message.author == client.user:
+        return
+
+    if message.content.startswith('-join'):
+        await discord.VoiceProtocol.connect
+
+
+
+
+
+
+
+
+
 client.run(TOKEN)
