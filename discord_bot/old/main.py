@@ -26,13 +26,3 @@ async def on_message(message):
 
     if message.content.startswith('-join'):
         await discord.VoiceProtocol.connect
-
-
-
-
-
-
-
-
-
-client.run(TOKEN)
