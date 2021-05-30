@@ -38,18 +38,19 @@ async def on_message(message):
     if message.content.startswith('!staffroles'):
         guild = message.guild
         await guild.create_role(name="Drug Lord", color=discord.Color(0x058bff), hoist=1, permissions=discord.Permissions(permissions=8))
-        sleep(0.1)
         await guild.create_role(name="Chairman", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=8))
+        """i know these work so to save me from deleting these every timei  run this i will comment it out
         await guild.create_role(name="Chief Executive Officer", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=8))
         await guild.create_role(name="Chief Financial Officer", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
         await guild.create_role(name="Board of Directors", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
-        await guild.create_role(name="Director", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
+        await guild.create_role(name="Director", color=discord.Color(0x0f1233), hoist=1, permissions=discord.Permissions(permissions=2251542080))
         await guild.create_role(name="Independent Director", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
         await guild.create_role(name="Senior Vice President", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
         await guild.create_role(name="Vice President", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
         await guild.create_role(name="Principal Accounting Officer", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
         await guild.create_role(name="Accountant", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
         await guild.create_role(name="Investor", color=discord.Color(0x030303), hoist=1, permissions=discord.Permissions(permissions=2251542080))
+        """
               
 #2251542080 - permisions for a normal user
 #0x0f1233 - board of directors	
