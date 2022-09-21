@@ -1,11 +1,17 @@
 package main
 
+//import is required to do most things in go
+//fmt allows for input and output like println, input, etc
+//strings allow for editing of strings, as shown in colormixer()
 import (
 	"fmt"
 	"strings"
 )
 
+//main function for calling all of my programs
 func main() {
+
+	//setting variable so go can listen for input
 	var function string
 	fmt.Print("Enter a function to call: ")
 	fmt.Scan(&function)
@@ -19,7 +25,7 @@ func main() {
 		roman_numerals()
 	} else if function == "colormixer" {
 		colormixer()
-	} else {
+	} else { //error catching
 		fmt.Println("This function has not been created yet.")
 		fmt.Println()
 		main()
@@ -34,9 +40,13 @@ func day_converter() {
 
 	//creating variable
 	//var i int
+	//this var creation format looks kinda weird
 	i := 0
 	fmt.Print("Type a number from 1-7: ")
+	//listening for input
 	fmt.Scan(&i)
+
+	//if statement for days of the week
 	if i == 1 {
 		fmt.Println("Sunday")
 	} else if i == 2 {
@@ -51,7 +61,7 @@ func day_converter() {
 		fmt.Println("Friday")
 	} else if i == 7 {
 		fmt.Println("Saturday")
-	} else {
+	} else { //error catching
 		fmt.Println("This number is out of range. Please try again.")
 		fmt.Println()
 		day_converter()
@@ -59,10 +69,17 @@ func day_converter() {
 }
 
 func roman_numerals() {
+	//function roman_numerals takes no arguments
+	//asks user for an input between 1 and 10
+	//gives them the roman numeral corresponding to the number
+	//may be revamped with a loop instead of if statements
+
+	//input var creation & listen
 	var number int
 	fmt.Print("Enter a number between 1 and 10:")
 	fmt.Scan(&number)
 
+	//if statement
 	if number == 1 {
 		fmt.Println("I")
 	} else if number == 2 {
