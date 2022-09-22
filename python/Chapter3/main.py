@@ -11,19 +11,19 @@ def day_converter():
     day = int(input("Enter a number between 1 and 7: "))
     
     if day == 1:
-        print("Lunes")
+        print("Sunday")
     elif day == 2:
-        print("Martes")
+        print("Monday")
     elif day == 3:
-        print("Miércoles")
+        print("Tuesday")
     elif day == 4:
-        print("Jueves")
+        print("Wednesday")
     elif day == 5:
-        print("Viernes")
+        print("Thursday")
     elif day == 6:
-        print("Sábado")
+        print("Friday")
     elif day == 7:
-        print("Domingo")
+        print("Saturday")
     else:
         print("This number is out of range. Try again.")
         day_converter()
