@@ -10,7 +10,7 @@ def bug_collector():
     totalbugs = 0 #accumulator
    
    
-    #for every day in new range 1-5, call these functions
+    #for every day in new range 1-5, do these things
     for daycount in range(1,5+1):
     
         #seperated these so that i could show day count in input statement
