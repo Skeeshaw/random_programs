@@ -34,3 +34,29 @@ void bug_collector() {
   cout << "\nGreat job, you collected " << total << " bugs this week. You're the bug master!";
 }
 
+void distance_traveled() {
+
+  int mph;
+  int hours;
+  
+  cout << "\nEnter the speed of the vehicle in mph: ";
+  cin >> mph;
+
+  //simple input validation
+  //later programs will use more advanced validation
+  while(mph < 1) {
+    cout << "\nYour answer was not calculatable. Please try again.";
+    distance_traveled();
+  }
+
+  cout << "\nEnter the amount of hours the vehicle traveled:";
+  cin >> hours;
+
+  while(hours < 1) {
+    cout << "\nYour answer was not calculatable. Please try again.";
+
+    cout << "\nEnter the amount of hours the vehicle traveled:";
+  }
+  
+}
+
