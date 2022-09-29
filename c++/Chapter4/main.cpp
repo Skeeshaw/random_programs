@@ -1,17 +1,13 @@
 #include <iostream>
 #include <string>
+#include <fstream>
 using namespace std;
 
 
-int main() {
-  //until i find a better way of running functions individually i will just change this line
-  //every time i want to run a different one
-  bug_collector();
-  return 0;
-}
+
 
 void bug_collector() {
-
+  //yeah this func is funny but it adds your bugs together
   cout << "Welcome to Bug Masters bug collection system." << "\n";
 
   //idk why but if i dont set this to 0 it gives me a weird output
@@ -35,7 +31,7 @@ void bug_collector() {
 }
 
 void distance_traveled() {
-
+  //shows how far you traveled, given hours and speed
   int mph;
   int hours;
   
@@ -56,7 +52,45 @@ void distance_traveled() {
     cout << "\nYour answer was not calculatable. Please try again.";
 
     cout << "\nEnter the amount of hours the vehicle traveled:";
+    cin >> hours;
+
   }
+
+  cout << "\nHour\tDistance";
+  cout << "\n----------------";
+
+  for(int travel = 1; travel < hours + 1; travel++) {
+
+    cout << "\n" << travel << "\t\t" << mph * travel; 
+  }
+  
+  cout << "\n";
   
 }
 
+void pennies() {
+  //doubles pennies for amount of days user specifies
+  int days;
+  double amount = 0.01;
+  
+  cout << "Enter the amount of days to double pennies: ";
+  cin >> days;
+
+  cout << "\nDays\t\tAmount";
+  cout << "\n------------------";
+  for(int accum = 1;accum < days + 1;accum++) {
+    
+    cout << "\n " << accum << "\t\t\t$" << amount;
+    amount *= 2;
+  }
+
+  
+}
+
+
+int main() {
+  //until i find a better way of running functions individually i will just change this line
+  //every time i want to run a different one
+  pennies();
+  return 0;
+}
