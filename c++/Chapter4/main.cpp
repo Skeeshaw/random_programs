@@ -87,10 +87,28 @@ void pennies() {
   
 }
 
+void hot_dog() {
+
+  //c++ has constants built in
+  const int dogs_per_pack = 10
+  const int buns_per_pack = 8
+
+  int people;
+  int dogsperperson;
+
+  cout << "\nHow many people will be attending your event? ";
+  cin >> people;
+  cout << "\n\nHow many hot dogs will be cooked per person? ";
+  cin >> dogsperperson;
+
+  
+  
+}
+
 
 int main() {
   //until i find a better way of running functions individually i will just change this line
   //every time i want to run a different one
-  pennies();
+  hot_dog();
   return 0;
 }
