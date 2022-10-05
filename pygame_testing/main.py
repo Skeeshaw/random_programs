@@ -1,4 +1,6 @@
 import pygame
+import modules
+from modules import *
 from pygame.locals import *
 
 # --------------=<Constants>=-------------- #
@@ -16,7 +18,6 @@ CYAN = (0,255,255)
 MAGENTA = (255,0,255)
 
 # --------------=</Constants>=-------------- #
-
 
 def test1():
     #test 1 of pygame's basic functions
@@ -115,25 +116,28 @@ def ball_move():
 
 # ------------------------------------------ #
 
-pygame.init()
+def chess():
+    pygame.init()
+    
+    n = 8
+    surface_sz = 700
+    screen = pygame.display.set_mode((surface_sz,surface_sz))
+    running = True
 
-
-
-screen = pygame.display.set_mode((1000,650))
-running = True
-
-while Running:
-    for event in pygame.event.get():
-        
-        if event.type == QUIT:
-            running = False
+    modules.chessboard(screen,surface_sz,n)
+            
+    while running:
+        for event in pygame.event.get():
             
             
-        
-
-
-pygame.quit()
+            if event.type == QUIT:
+                running = False
 
 
 
+        pygame.display.update()
+    pygame.quit()
+
+
+chess()
 
