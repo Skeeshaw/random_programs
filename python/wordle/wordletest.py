@@ -20,6 +20,9 @@ answer = content[ansnum]
 answerfile.close()
 
 
+
+#temp input#
+answer = "cigar"
 # ------------ input section ------------ #
 
 guessfile = open("guesses.txt","r")
@@ -60,7 +63,7 @@ if not exists:
 choicelist = [*choice]
 anslist = [*answer]
 
-anslist.pop()
+
 
 print(anslist)
 
@@ -96,19 +99,20 @@ if commonletter:
         #common letter exists but not the same placement
         sameplace = False
         
+
 for amoung in range(5):
     
     #print(Fore.RED + <string>)
     #print(Style.RESET_ALL + <string>)
     
     if amoung == place_in_ans:
-        first_row[amoung] = (Fore.YELLOW + str("[" + choice[amoung] + "]"))
+        first_row[amoung] = "\033[1;33;m" + "[" + choice[amoung] + "]"
         
     elif place_in_choice == place_in_ans:
         
-        first_row[amoung] = (Fore.GREEN + str("[" + choice[amoung] + "]"))
+        first_row[amoung] = str("\033[1;32;m" + "[" + choice[amoung] + "]")
         
     else:
         first_row[amoung] = "[" + choice[amoung] + "]"
     
-print(first_row)
+print(*first_row)
