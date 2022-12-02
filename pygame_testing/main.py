@@ -1,6 +1,6 @@
 import pygame
 import modules
-from modules import *
+from modules import * # pylint: disable=wildcard-import
 from pygame.locals import *
 
 # --------------=<Constants>=-------------- #
@@ -26,8 +26,7 @@ def test1():
     background = GRAY
 
     #dictionary defining keys to their colors
-    key_dict = {K_k:BLACK, K_r:RED, K_g:GREEN, K_b:BLUE, K_y:YELLOW, K_c:CYAN, K_m:MAGENTA, K_w:WHITE}
-
+    key_dict = {K_k:BLACK, K_r:RED, K_g:GREEN, K_b:BLUE, K_y:YELLOW, K_c:CYAN, K_m:MAGENTA, K_w:WHITE} #pylint disable:undefined-variable
     #initialize all pygame modules
     pygame.init()
 
